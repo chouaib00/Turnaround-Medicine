@@ -1,0 +1,18 @@
+﻿@model AdmPanel.Models.Post
+
+<div>
+    <h3><strong>Пользователь:</strong>  @Html.DisplayFor(m => m.UserName)</h3>
+    <p><strong>Описание:</strong> @Html.DisplayFor(m => m.Description)</p>
+
+    @{
+        var base64 = Convert.ToBase64String(Model.Photo);
+        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+    }
+
+    <img src="@imgSrc" width="500" height="700" />
+
+    <ul class="actions" >
+        <li>@Html.ActionLink("Удалить", "PostDelete", new { id = Model.Id, id2 = ViewBag.Id2 })</li>
+        <li>@Html.ActionLink("Оставить", "PostReturn", new { id = Model.Id, id2 = ViewBag.Id2 })</li>
+    </ul>
+</div>

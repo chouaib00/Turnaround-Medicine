@@ -1,0 +1,208 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoomContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.user.dipl1.UserFullPostFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/WhiteColor"
+        android:elevation="2dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/fullPostUserIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="18dp"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/UserNameFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/fullPostUserIcon"
+            android:layout_toEndOf="@+id/fullPostUserIcon"
+            android:paddingLeft="8dp"
+            android:paddingRight="@dimen/default_padding_margin"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/UserDateFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UserNameFull"
+            android:layout_toEndOf="@+id/fullPostUserIcon"
+            android:layout_toRightOf="@+id/fullPostUserIcon"
+            android:paddingLeft="8dp"
+            android:paddingRight="@dimen/default_padding_margin"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/lnrIcons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/updatePostUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/WhiteColor"
+                android:src="@drawable/zzz_border_color"
+                android:visibility="invisible"
+                android:contentDescription="TODO" />
+
+            <ImageButton
+                android:id="@+id/deletePostUserButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:backgroundTint="@color/WhiteColor"
+                android:src="@drawable/zzz_border_color"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:id="@+id/blockingBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Закрыть осбуждение"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/default_padding_margin"/>
+
+            <TextView
+                android:id="@+id/appealBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Пожаловаться"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/default_padding_margin"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/UserDescriptionFull"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/UserDateFull"
+            android:layout_below="@+id/fullPostUserIcon"
+            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:textColor="@android:color/black"
+            android:fontFamily="monospace"
+            android:textSize="@dimen/material_dense_text_body_regular_tablet"/>
+
+        <RelativeLayout
+            android:id="@+id/fl"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/UserDescriptionFull"
+            android:layout_centerHorizontal="true">
+
+            <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+                android:id="@+id/UserPostFull"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:paddingBottom="8dp"
+                android:paddingTop="16dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/fl"
+            android:layout_marginTop="5dp"
+            android:alpha="0.3"
+            android:background="@color/material_text_color_divider_light_theme" />
+
+        <co.lujun.androidtagview.TagContainerLayout
+            android:id="@+id/UserTagsFull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fl"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            app:container_background_color="@color/WhiteColor"
+            app:container_border_color="@color/WhiteColor"
+            app:container_enable_drag="false"
+            app:horizontal_interval="10dp"
+            app:tag_clickable="true"
+            app:tag_corner_radius="5dp"
+            app:tag_text_color="@android:color/holo_blue_dark"
+            app:tag_text_size="13sp"
+            app:tag_theme="random"
+            app:vertical_interval="10dp" />
+
+        <!--<RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="800dp"
+                android:layout_alignLeft="@+id/UserTagsFull"
+                android:layout_alignStart="@+id/UserTagsFull"
+                android:layout_below="@+id/UserTagsFull"
+                android:visibility="invisible">
+
+                <ListView
+                    android:id="@+id/UserCommentsFull"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:divider="@color/backColor"
+                    />
+
+            </RelativeLayout>-->
+
+        <TextView
+            android:id="@+id/showCommentsLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/UserTagsFull"
+            android:padding="8dp"
+            android:text="@string/showComment"
+            android:textAlignment="center"
+            android:textColor="@color/grey_600"
+            android:textSize="16sp" />
+
+        <FrameLayout
+            android:id="@+id/commentsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/UserTagsFull"
+            android:layout_alignStart="@+id/UserTagsFull"
+            android:layout_below="@+id/showCommentsLink"
+            android:layout_marginTop="10dp"
+            android:padding="@dimen/default_padding_margin">
+
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/zoomUserPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:visibility="invisible"
+            android:contentDescription="TODO" />
+
+    </RelativeLayout>
+
+</ScrollView>

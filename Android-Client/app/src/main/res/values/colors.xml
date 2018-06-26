@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2323d9</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="iconsColor">#696666</color>
+    <color name="backColor">#f5f3f3</color>
+    <color name="WhiteColor">#ffffff</color>
+    <color name="goldenColor">#ffd502</color>
+    <color name="ultraViolet">#7f1ae5</color>
+
+    <color name="bRos">#FADADD</color>
+    <color name="bGreen">#BADBAD</color>
+    <color name="alphaBlack">#14ffffff</color>
+</resources>

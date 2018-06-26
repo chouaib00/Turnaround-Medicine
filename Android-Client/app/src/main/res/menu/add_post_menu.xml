@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/addPhotoPost"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Запись с графическим контентом"></item>
+
+    <item
+        android:id="@+id/addTextPost"
+        android:icon="@drawable/zzz_tooltip_text"
+        android:title="Запись с текстовым контентом"></item>
+</menu>

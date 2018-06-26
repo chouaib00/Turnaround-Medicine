@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Жалоба"
+        android:textStyle="bold"
+        android:textSize="@dimen/material_text_title_medium_tablet"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:textColor="@color/material_text_color_title_light_theme"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Пожалуйста, укажите причину, по которой данный контент должен быть удален."
+        android:textSize="@dimen/material_dense_text_body_medium_tablet"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:textColor="@color/material_text_color_body_1_light_theme"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/default_padding_margin">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/arb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Раскрытие врачебной тайны"/>
+
+            <RadioButton
+                android:id="@+id/arb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Порнография"/>
+
+            <RadioButton
+                android:id="@+id/arb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Оскорбительное поведение"/>
+
+            <RadioButton
+                android:id="@+id/arb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Спам"/>
+
+            <RadioButton
+                android:id="@+id/arb5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Другое"/>
+
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/appealMessageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="Причина жалобы"
+        android:visibility="invisible"/>
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/default_padding_margin">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:hint="Описание">
+
+        <EditText
+            android:inputType="textMultiLine"
+            android:id="@+id/textDescInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Теги"
+        android:layout_margin="@dimen/default_padding_margin">
+
+        <EditText
+            android:id="@+id/textTagsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_divider_size"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:background="@color/md_text_color_divider_light_theme"
+        />
+
+    <CheckBox
+        android:id="@+id/makePrivateTextPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Приватный пост"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:buttonTint="@android:color/holo_red_light"/>
+
+    <Button
+        android:id="@+id/publihTextPostBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/material_button_height"
+        android:textColor="@color/material_text_color_title_light_theme"
+        android:textAlignment="center"
+        android:text="Опубликовать"
+        android:layout_margin="@dimen/default_padding_margin"
+        android:background="@drawable/back_button"
+        android:layout_gravity="center_horizontal"/>
+
+
+</LinearLayout>

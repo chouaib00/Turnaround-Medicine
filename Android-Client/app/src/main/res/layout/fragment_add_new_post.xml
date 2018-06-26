@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.dipl1.AddNewPostFragment">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/scrollView2"
+        android:padding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/add_new_photo_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/ic_launcher"
+                android:contentDescription="Выбранное изображение" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/add_new_photo_view"
+                android:layout_marginTop="15dp"
+                android:id="@+id/uil1">
+
+                <EditText
+                    android:id="@+id/add_description_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Описание"
+                    android:inputType="textMultiLine" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/uil1"
+                android:layout_marginTop="15dp"
+                android:id="@+id/uil2"
+                app:hintEnabled="true"
+                app:errorTextAppearance="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/add_tags_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Теги"
+                    android:inputType="textAutoComplete" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/HideFacecheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_light"
+                android:text="Скрыть лицо"
+                android:textColorLink="@android:color/holo_red_light"
+                android:layout_below="@id/uil2"
+                android:layout_marginTop="15dp"/>
+
+            <CheckBox
+                android:id="@+id/PrivatePhotocheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@android:color/holo_red_light"
+                android:text="Приватное фото"
+                android:textColorLink="@android:color/holo_red_light"
+                android:layout_below="@id/HideFacecheckBox"/>
+
+            <Button
+                android:id="@+id/load_post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_red_light"
+                android:elevation="2dp"
+                android:text="Загрузить изображение"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:padding="8dp"
+                android:layout_below="@id/PrivatePhotocheckBox"
+                android:layout_alignParentRight="true"/>
+
+
+<!--            <Button
+                android:id="@+id/rotate_post_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="14dp"
+                android:layout_marginStart="14dp"
+                android:layout_toEndOf="@+id/load_post_button"
+                android:layout_toRightOf="@+id/load_post_button"
+                android:background="@android:color/holo_blue_bright"
+                android:elevation="2dp"
+                android:text="Повернуть изображение"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:padding="8dp"/>-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

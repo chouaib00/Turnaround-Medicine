@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/icons8_stethoscope_filled_50"
+            android:title="Консилиумы" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/icons8_treatment_48"
+            android:title="Мои клинические случаи" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/icons8_medical_heart_48"
+            android:title="Избранное" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/icons8_ultrasound_filled_50"
+            android:title="Уведомления" />
+
+        <item
+            android:id="@+id/bottomInvites"
+            android:icon="@drawable/icons8_ambulance_filled_50"
+            android:title="Приглашения"></item>
+
+    </group>
+
+    <item android:title="Настройки">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_setting_light"
+                android:title="Изменить настройки" />
+        </menu>
+    </item>
+
+</menu>

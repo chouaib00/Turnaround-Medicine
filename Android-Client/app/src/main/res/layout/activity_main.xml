@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.dipl1.profile.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/blockA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/default_padding_margin_small"
+        android:elevation="@dimen/material_elevation_toolbar">
+
+        <TextView
+            android:id="@+id/profileUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/material_text_title_medium_tablet"
+            android:textColor="@color/md_text_color_title_light_theme"
+            android:textStyle="bold"
+            android:layout_gravity="start|left|center_vertical"
+            android:layout_weight="1"/>
+
+        <ImageView
+            android:id="@+id/inviteBtn"
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/invite"
+            android:contentDescription="Приглашение"/>
+
+        <ImageView
+            android:id="@+id/isDoctorIcon"
+            android:layout_width="@dimen/default_icon_size"
+            android:layout_height="@dimen/default_icon_size"
+            android:layout_gravity="right|end|center_vertical"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/sertificate"
+            android:contentDescription="Сертификат" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerA"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_divider_size"
+        android:layout_below="@id/blockA"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginBottom="@dimen/default_padding_margin"
+        android:background="@color/material_text_color_divider_light_theme"
+        android:elevation="@dimen/material_elevation_bottom_sheet"
+        />
+
+
+
+    <LinearLayout
+        android:id="@+id/blockB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="@dimen/material_elevation_card"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_below="@id/dividerA">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileUserAvatar"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="start|left|center_vertical"
+            android:layout_marginLeft="@dimen/default_padding_margin_extra_large" />
+
+
+
+          <LinearLayout
+              android:layout_gravity="end|right|center_vertical"
+              android:layout_weight="1"
+              android:id="@+id/plLayout"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/pLayout"
+            android:layout_weight="1"
+            android:layout_gravity="end|right|center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/default_icon_size"
+                    android:layout_height="@dimen/default_icon_size"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/posts"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/publishingCountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/grey_800"
+                    android:textSize="@dimen/material_text_title_medium_tablet" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/default_icon_size"
+                    android:layout_height="@dimen/default_icon_size"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/comments2"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/commentsCountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/grey_800"
+                    android:textSize="@dimen/material_text_title_medium_tablet"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/default_icon_size"
+                    android:layout_height="@dimen/default_icon_size"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@drawable/zzz_account_multiple"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:id="@+id/followersCountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="0"
+                    android:textColor="@color/grey_800"
+                    android:textSize="@dimen/material_text_title_medium_tablet" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+              <LinearLayout
+                  android:layout_gravity="center_horizontal"
+                  android:id="@+id/blockD"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@id/blockC"
+                  android:orientation="horizontal"
+                  android:layout_margin="@dimen/default_padding_margin">
+
+                  <Button
+                      android:id="@+id/followUnfollowBtn"
+                      android:layout_width="match_parent"
+                      android:layout_height="@dimen/material_button_height"
+                      android:elevation="@dimen/material_elevation_button"
+                      android:text="@string/follow"
+                      android:textColor="@color/material_text_color_button_light_theme"
+                      android:textSize="@dimen/material_dense_text_button_medium"
+                      android:background="@drawable/back_button"/>
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/blockC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/default_padding_margin_large"
+        android:layout_marginLeft="@dimen/default_padding_margin_small"
+        android:layout_below="@id/blockB">
+
+        <TextView
+            android:id="@+id/userInfoView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text=""
+            android:textColor="@color/grey_700"
+            android:textSize="@dimen/material_text_size_small_tablet"
+
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerB"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_divider_size"
+        android:layout_below="@id/blockC"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginBottom="@dimen/default_padding_margin"
+        android:background="@color/material_text_color_divider_light_theme"
+        android:elevation="@dimen/material_elevation_bottom_sheet"
+        />
+
+    <LinearLayout
+        android:layout_margin="@dimen/default_padding_margin"
+        android:id="@+id/blockX"
+        android:layout_below="@+id/dividerB"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/showAsMapBtn"
+            android:layout_gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:text="Показать на карте"
+            android:layout_height="@dimen/material_button_height"
+            android:elevation="@dimen/material_elevation_button"
+            android:textColor="@color/material_text_color_button_light_theme"
+            android:textSize="@dimen/material_dense_text_button_medium"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:elevation="@dimen/material_elevation_menu"
+            android:background="@color/material_text_color_divider_light_theme"
+            android:layout_width="@dimen/default_divider_size"
+            android:layout_height="match_parent"/>
+
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/showAsPhoneBtn"
+            android:layout_gravity="right|center_vertical"
+            android:layout_width="match_parent"
+            android:text="Позвонить"
+            android:layout_height="@dimen/material_button_height"
+            android:elevation="@dimen/material_elevation_button"
+            android:textColor="@color/material_text_color_button_light_theme"
+            android:textSize="@dimen/material_dense_text_button_medium"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerС"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/default_divider_size"
+        android:layout_below="@id/blockX"
+        android:layout_marginTop="@dimen/default_padding_margin"
+        android:layout_marginBottom="@dimen/default_padding_margin"
+        android:background="@color/material_text_color_divider_light_theme"
+        android:elevation="@dimen/material_elevation_bottom_sheet"
+        />
+
+    <RelativeLayout
+        android:layout_below="@+id/dividerС"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/profileImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

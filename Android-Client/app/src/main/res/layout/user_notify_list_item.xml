@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_photo_notify"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingStart="16dp"
+        android:paddingEnd="@dimen/default_padding_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/user_author_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/textView2"
+        android:paddingStart="5dp"
+        android:paddingEnd="@dimen/default_padding_margin"
+        android:textColor="@android:color/black"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_date_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="@dimen/default_padding_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/user_photo_notify"
+        android:paddingStart="56dp"
+        android:paddingEnd="@dimen/default_padding_margin"
+        android:text="@string/notify_string"
+        android:textSize="13sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/user_author_notify"
+        app:layout_constraintStart_toEndOf="@+id/user_photo_notify" />
+
+    <View
+        android:id="@+id/customDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="@id/user_photo_notify"
+        app:layout_constraintStart_toEndOf="@+id/user_photo_notify"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/newBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="@dimen/default_padding_margin"
+        android:tint="@color/material_red800"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/zzz_new_box"
+        tools:layout_editor_absoluteX="476dp"
+        tools:layout_editor_absoluteY="24dp"
+        android:contentDescription="TODO" />
+
+</android.support.constraint.ConstraintLayout>

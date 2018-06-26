@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.dipl1.UserNewsFragment">
+
+    <LinearLayout
+        android:id="@+id/lnr1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SearchView
+            android:id="@+id/user_search_news"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:queryHint="Введите запрос для поиска"
+            android:voiceIcon="@drawable/zzz_microphone"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+        </SearchView>
+
+        <ImageButton
+            android:id="@+id/voiceSearchBtn"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/WhiteColor"
+            android:src="@drawable/zzz_microphone"
+            android:contentDescription="TODO" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/lnr2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnr1"
+        android:padding="@dimen/default_padding_margin"
+        android:elevation="@dimen/material_elevation_menu">
+
+        <ImageView
+            android:id="@+id/goToTagsView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/banner_tags" />
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/user_news_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/lnr2" />
+
+    <ProgressBar
+        android:id="@+id/progressBarNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/user_news_recycler" />
+</RelativeLayout>

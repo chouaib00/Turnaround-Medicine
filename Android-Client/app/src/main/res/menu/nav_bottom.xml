@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottomProfile"
+        android:icon="@drawable/icons8_treatment_48"
+        android:title="Мои клинические случаи"></item>
+
+    <item
+        android:id="@+id/bottomNews"
+        android:icon="@drawable/icons8_stethoscope_filled_50"
+        android:title="Консилиумы"></item>
+
+    <item
+        android:id="@+id/bottomFavorites"
+        android:icon="@drawable/icons8_medical_heart_48"
+        android:title="Избранное"></item>
+
+    <item
+        android:id="@+id/bottomNotifications"
+        android:icon="@drawable/icons8_ultrasound_filled_50"
+        android:title="Уведомления"></item>
+
+    <item
+        android:id="@+id/bottomSettings"
+        android:icon="@drawable/mr_ic_settings_light"
+        android:title="Настройки"></item>
+</menu>
